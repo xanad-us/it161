@@ -1,0 +1,199 @@
+/* Global rules */
+
+@import url('https://fonts.googleapis.com/css?family=Space+Mono|VT323');
+
+::selection {
+    color: #1E1014;
+    background: #C3F1BB;
+}
+
+html {
+    font-family: 'Space Mono', 'Arial', sans-serif;
+    font-size: 1em;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin:0; /* removes gap at top of page */
+    padding: 0;
+    background-color:#fdcff3;
+}
+
+header h1 {
+    font-family: VT323;
+    font-size: 1.5em;
+    color: #F5F5F5;
+    background-color:#1E1014;
+    margin: auto;
+    position: fixed;
+    width: 100%;
+    height: 25px;
+    padding-left: 10px;
+}
+
+header h1 a {
+    text-transform: none;
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
+header.backer {
+    width: 95%;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    position: relative;
+    z-index: -1;
+}
+
+nav {
+    position: fixed;
+    margin: 5px;
+    min-height: 100%;
+    z-index: 1;
+    width: auto;
+    margin-top: 30px;
+    overflow-x: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    background-color:#C3F1BB;
+    color: #1E1014;
+    display: block;
+    float: left;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    text-decoration: none;
+    text-transform: none;
+    border-width: 3px;
+    border-radius: 3px;
+    border-color:#C3F1BB;
+    border-style: outset;
+}
+
+nav a.hover, .active {
+    background-color: #A846A0;
+    color: #C3F1BB;
+    border-width: 3px;
+    border-radius: 3px;
+    border-color:#A846A0;
+    border-style: inset;
+}
+
+nav .icon {
+    display: none;
+}
+
+footer {
+    background-color:#A846A0;
+    font-family: VT323;
+    font-size: 1em;
+    padding-left: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+footer a {
+    text-decoration: none;
+    color:#C3F1BB;
+}
+
+main {
+    background-color:#F5F5F5;
+    position: static;
+    width: 90%;
+    padding: 10px;
+    padding-bottom: 50px;
+    margin-top: 30px;
+    margin-left: 50px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color:#A846A0;
+    border-style: solid;
+}
+
+main ul {
+    list-style-type: none;
+}
+
+main ul a {
+    text-decoration: none;
+    font-weight:bold;
+    color: #A846A0;
+}
+
+/* scrollbar styles */
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+::-webkit-scrollbar-track {
+    background: #A846A0;
+    box-shadow: inset 0 0 5px #fdcff3;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #fdcff3;
+  }
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C3F1BB;
+  }
+
+  /* Buttons */
+::-webkit-scrollbar-button:single-button {
+    background-color: #A846A0;
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+  }
+  /* Up */
+  ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #1E1014 transparent;
+  }
+  
+  ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #1E1014 transparent;
+  }
+  /* Down */
+  ::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: #1E1014 transparent transparent transparent;
+  }
+
+  /* Responsive rules */
+
+/* DESKTOP */
+@media all and (min-width:1200px) {
+    main {
+        width: 90%;
+    }
+}
+
+/* TABLET */
+@media all and (min-width:501px) and (max-width:1199px) {
+    main {
+        width: 85%;
+    }
+}
+/* PHONE */
+@media all and (max-width:500px) {
+    main {
+        width: 75%;
+    }
+
+}
